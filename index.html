@@ -1,0 +1,107 @@
+<!doctype html>
+​
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+​
+  <title>Ystävächat</title>
+  <meta name="description" content="ystavachat">
+  <meta name="Loppuprojekti" content="SitePoint">
+​
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+​
+</head>
+​
+<body>
+<style>
+​
+​
+​
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 300px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+​
+form div + div {
+  margin-top: 1em;
+}
+​
+label {
+  /* Uniform size & alignment */
+​
+  width: 40px;
+  text-align: right;
+}
+​
+input, 
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+​
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+​
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+​
+input:focus, 
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+​
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+​
+  /* Provide space to type some text */
+  height: 5em;
+}
+​
+body {
+background-image: url("https://teron-pesufati.s3.amazonaws.com/cat7.jpg");
+}
+​
+</style>
+​
+<h1 style="text-align:center"> Ystävächat </h1>
+​
+<h2 style="text-align:center"> Täytä oheinen lomake ja lähetä viesti </h2>
+​
+<form action="https://a8q4go0zx4.execute-api.eu-west-1.amazonaws.com/dev/send-email" method="post">
+​
+<div>
+<label for="name">Oma nimesi:</label><br>
+  <input type="text" id="sender" name="sender"><br>
+</div>
+<label for="source">Sähköpostiosoitteesi:</label><br>
+  <input type="text" id="source" name="source"><br>
+</div>
+ <label for="subject">Aihe</label><br>
+  <input type="text" id="subject" name="subject"><br>
+</div>
+<label for="destination">Vastaanottajan sähkoposti</label><br>
+  <input type="text" id="destination" name="destination"><br>
+</div>
+<label for="destination">Vastaanottajan nimi</label><br>
+  <input type="text" id="receiver" name="receiver"><br>
+</div>
+<br>
+<div>
+<label for="message">Viestisi</label><br>
+<textarea id="content" name="content"></textarea><br> 
+<div>
+<br>
+  <button >Submit</button>
+</form>
+​
+</body>
+</html>
